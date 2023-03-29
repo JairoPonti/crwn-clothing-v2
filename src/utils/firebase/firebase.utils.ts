@@ -26,12 +26,12 @@ import {
 import { Category } from '../../store/categories/category.types';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyAv7Ho9GKb_q-6U_wpkUZwjagBcc5hy2Cs",
+  authDomain: "crown-clothing-db-ea628.firebaseapp.com",
+  projectId: "crown-clothing-db-ea628",
+  storageBucket: "crown-clothing-db-ea628.appspot.com",
+  messagingSenderId: "416419632656",
+  appId: "1:416419632656:web:353a8c38cb434c71b9dc95"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -42,7 +42,7 @@ googleProvider.setCustomParameters({
   prompt: 'select_account',
 });
 
-export const auth = getAuth();
+export const auth = getAuth(firebaseApp);
 export const signInWithGooglePopup = () =>
   signInWithPopup(auth, googleProvider);
 export const signInWithGoogleRedirect = () =>
